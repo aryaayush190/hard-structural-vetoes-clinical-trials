@@ -1,6 +1,8 @@
 # Reproducibility package — "Hard Structural Vetoes Under Unseen Trial Shift: An Empirical Study of LLM-Based Clinical Trial Matching"
 
-INDICON 2026, Paper ID 5232. Anonymous code-review release.
+INDICON 2026, Paper ID 5232. Public camera-ready reproducibility release.
+
+**Author:** Ayush Arya, Neha Kriti, Harsha Kulkarni, Sarthak Srivastva, Varun Dutt
 
 This package reproduces the paper's reported statistics for non-small-cell lung cancer (NSCLC)
 clinical-trial eligibility matching, comparing a hard-veto neuro-symbolic hybrid against LLM-only
@@ -9,15 +11,15 @@ retrieval, patient generation) is included **for transparency**; the reported **
 from frozen per-pair predictions with no API, database, or model calls**.
 
 ## Folder map
-```
+```text
 indicon-5232-reproducibility/
 ├── README.md                 ← this file
 ├── REPRODUCIBILITY.md        ← step-by-step + the exact numbers each script reproduces
 ├── requirements.txt          ← numpy only (serving deps optional, commented)
-├── LICENSE                   ← MIT (anonymous)
+├── LICENSE                   ← MIT
 ├── prompts/                  ← exact eligibility, ensemble, SQL-reasoning, and field-re-read prompts
 ├── structural_verifier/      ← Type-A classifier + validation agent (transparency)
-├── patient_generation/       ← template-based synthetic-patient generator (transparency)
+├── patient_generation/      ← template-based synthetic-patient generator (transparency)
 ├── retrieval/                ← two-stream + MMR retrieval and non-secret config (transparency)
 ├── data/                     ← synthetic patient profiles + public trial criteria + split report
 ├── frozen_predictions/       ← the per-pair model outputs the analysis scripts load
@@ -55,4 +57,6 @@ condition; the cache-only analysis scripts; and the precomputed result JSONs.
   are provided so the statistics reproduce **exactly**.
 - Patients are synthetic; trial criteria come from the public TREC 2022 Clinical Trials corpus.
 
-Reference: INDICON 2026, Paper ID 5232. (No author or institution identifiers are included.)
+**Reference:** INDICON 2026, Paper ID 5232.
+
+**Maintainer:** Ayush Arya.
